@@ -1,6 +1,5 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile.jpeg";
 
 const About = () => {
@@ -15,14 +14,21 @@ const About = () => {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-2 leading-tight">
             Hi, I am
           </h1>
+
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Aditi Sharma
           </h2>
+
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight">
             <span className="text-white">I am a </span>
+
             <span className="text-[#8245ec]">
               <Typewriter
-                words={["FullStack Developer", "Software Engineer", "UI/UX Designer"]}
+                words={[
+                  "FullStack Developer",
+                  "Software Engineer",
+                  "UI/UX Designer",
+                ]}
                 loop={0}
                 cursor
                 cursorStyle="|"
@@ -34,11 +40,19 @@ const About = () => {
           </h3>
 
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-           I’m an aspiring Software Engineer focused on full-stack development, AI/LLM technologies, and cloud computing. I enjoy building scalable, user-focused applications and exploring how AI can solve real-world problems.
-
-I’m continuously developing my skills across frontend, backend, cloud, and AI technologies while working on practical projects. My goal is to grow as a versatile engineer and build innovative, reliable, and intelligent software solutions.
+            I’m an aspiring Software Engineer focused on full-stack development,
+            AI/LLM technologies, and cloud computing. I enjoy building scalable,
+            user-focused applications and exploring how AI can solve real-world
+            problems.
+            <br />
+            <br />
+            I’m continuously developing my skills across frontend, backend,
+            cloud, and AI technologies while working on practical projects. My
+            goal is to grow as a versatile engineer and build innovative,
+            reliable, and intelligent software solutions.
           </p>
 
+          {/* Download CV Button */}
           <a
             href="https://drive.google.com/file/d/1TlV5P8g0QGV6jTca_I5S7E5pDEs9Imra/view?usp=drivesdk"
             target="_blank"
@@ -54,24 +68,16 @@ I’m continuously developing my skills across frontend, backend, cloud, and AI 
           </a>
         </div>
 
-        {/* Image Section */}
-       <div className="md:w-1/2 flex justify-center md:justify-end mb-10 md:mb-0">
-  <Tilt
-    className="w-72 h-96 sm:w-80 sm:h-[420px] md:w-[360px] md:h-[460px] border-2 border-purple-700 rounded-2xl overflow-hidden shadow-[0_0_35px_rgba(138,69,236,0.45)]"
-    tiltMaxAngleX={15}
-    tiltMaxAngleY={15}
-    perspective={1000}
-    scale={1.03}
-    transitionSpeed={1000}
-    gyroscope={true}
-  >
-    <img
-      src={profileImage}
-      alt="Aditi Sharma"
-      className="w-full h-full object-contain rounded-2xl drop-shadow-[0_10px_30px_rgba(138,69,236,0.5)]"
-    />
-  </Tilt>
-</div>
+        {/* Static Profile Image Section */}
+        <div className="md:w-1/2 flex justify-center md:justify-end mb-10 md:mb-0">
+          <div className="w-72 h-96 sm:w-80 sm:h-[420px] md:w-[360px] md:h-[460px] border-2 border-purple-700 rounded-2xl overflow-hidden shadow-[0_0_35px_rgba(138,69,236,0.45)]">
+            <img
+              src={profileImage}
+              alt="Aditi Sharma"
+              className="w-full h-full object-contain rounded-2xl"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
